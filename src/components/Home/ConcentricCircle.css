@@ -1,0 +1,88 @@
+.concentric-circle-container {
+  position: relative;
+  width: 100%; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove any margins */
+  background-color: #c8c4b9 !important;
+  overflow: hidden; /* Prevent overflow from larger SVGs */
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-image img {
+  width: 10vw; /* Responsive size */
+  height: 10vw; /* Responsive size */
+  border-radius: 50%;
+}
+
+/* Adjust SVG properties */
+.circle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-text {
+  transform-origin: center center; /* Rotates around the center */
+}
+
+.inner-text {
+  fill: #4f3c31; /* Change color to brown */
+  font-size: 0.2rem; /* Font size set to 2.5rem */
+  animation: rotate-inner 10s linear infinite; /* Rotate animation */
+  word-spacing: 0.2px;
+}
+
+.middle-text {
+  fill: #4f3c31; /* Default color */
+  font-size: 1.0vw; /* Medium text size */
+  animation: rotate-inner 14s linear infinite; /* Rotate animation */
+  word-spacing: 0.2px;
+}
+
+.outer-text {
+  fill: #88766c; /* Default color */
+  font-size: 1.5vw; /* Larger text size */
+  animation: rotate-inner 20s linear infinite; /* Rotate animation */
+  /* word-spacing: 0.2px; */
+}
+
+/* Keyframes for counterclockwise rotation */
+@keyframes rotate-inner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); /* Counterclockwise rotation */
+  }
+}
+
+@media (max-width: 480px) {
+  .outer-text{
+    fill: #88766c; /* Default color */
+  font-size: 4vw; /* Larger text size */
+  animation: rotate-inner 20s linear infinite; /* Rotate animation */
+  /* word-spacing: 0.2px; */
+  }
+
+.inner-text {
+  fill: #4f3c31; /* Change color to brown */
+  font-size: 0.5rem; /* Font size set to 2.5rem */
+  animation: rotate-inner 10s linear infinite; /* Rotate animation */
+  word-spacing: 0.2px;
+}
+
+.middle-text {
+  fill: #4f3c31; /* Default color */
+  font-size: 1.8vw; /* Medium text size */
+  animation: rotate-inner 14s linear infinite; /* Rotate animation */
+  word-spacing: 0.2px;
+}
+}

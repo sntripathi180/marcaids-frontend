@@ -1,0 +1,17 @@
+@import url("https://db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans");
+
+.carousel-control-prev {
+  left: -120px !important; /* Adjust as needed */
+}
+
+.carousel-control-next {
+  right: -120px !important; /* Adjust as needed */
+}
+
+/* Optional: Adjust the size of the arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: black; /* Optional: Add a background color */
+  border-radius: 50%; /* Optional: Make arrows circular */
+}
+

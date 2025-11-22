@@ -1,0 +1,338 @@
+
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap");
+
+.navbar{position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* High enough to stay above the HeroSection */
+  background-color: transparent; /* Transparent background for aesthetics */
+  transition: background-color 0.3s ease;
+}
+.App{
+  
+  background-size:contain;
+  background-color:#c8c4b9;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+  text-align: center;
+  /* padding: 20px; */
+  /* top: 0px; */
+  z-index: 100;
+  
+}
+.HS.carousleVisible{
+display: none;
+top: 400px;
+z-index: -100; 
+}
+
+.HS {
+  
+    margin:0;
+    height:100vh;               
+    width: 100%; 
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    
+    background-image:url(bg-home.jpeg);
+    /* cursor: pointer;
+    overflow: hidden; */
+  }
+  
+  /* Styling for the content within the hero section */
+  .hero-content .container {
+    
+    background: transparent !important;
+  }
+  
+  .hero-content .row {
+    
+    background: transparent !important;
+  }
+  /* .hero-content h1,
+  .hero-content h2,
+  .hero-content p {
+    font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" !important;
+    color: white !important;
+    text-align: end !important;
+  } */
+  
+  .hero-content h1 {
+    top:50%;
+    font-size: 10rem !important;
+    
+    color: black !important;
+    text-align: end !important;
+  }
+  
+  .hero-content h2 {
+    font-size: 6rem !important;
+    
+    color: white !important;
+    text-align: end !important;
+    font-style: normal !important;
+    text-decoration: none !important;
+    padding-top:25px ;
+  }
+  
+  .hero-content p {
+    padding-top: 30px;
+    
+    font-size: 3rem !important;
+    text-align: start !important;
+  }
+
+
+  /* Mobile view adjustments */
+
+
+  
+  /* Envelope-like animation for sliding out text */
+  .hero-sec {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .hero-sec.slide-out .col-md-7 h1 {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .hero-sec.slide-out .col-md-4 p {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .hero-sec.slide-out .col-md-5 h2 {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .hero-sec.slide-out .col-md-5 h1 {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  /* Styling for the additional text layer that appears after clicking */
+  .text-layer-1 {
+    
+    letter-spacing: 2px;
+    line-height: 1.5;
+    
+    font-weight: bold;
+    font-style: normal;
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 24px;
+    
+    color: white;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+
+/* Fade-in animation for the additional text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem !important;
+  }
+  .hero-content h2 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 6rem !important;
+    
+  }
+
+  .hero-content h2 {
+    font-size: 4rem !important;
+    
+  }
+
+  .hero-content p {
+    font-size: 4rem !important;
+    
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    /* gap: 10px; */
+  }
+}
+.HS.open {
+  
+  top:50%;
+  right:42%;
+  /* position:absolute; */
+  transform: rotate(60deg) scale(0.5);
+  transition: transform 0.5s ease;
+  /* height: 300px ;*/
+  width: 1000px ; 
+  
+  margin-left: 20%;
+}
+
+
+@media (max-width: 768px) {
+  .HS.open {
+      top: 70%; /* Adjust based on visual requirement */
+      right: 42%; /* Better alignment for mobile */
+      transform: rotate(60deg) scale(0.8); /* Slightly larger scale for better visibility */
+      width: 300px; /* Smaller width for mobile */
+      margin-left: 0; /* Center alignment for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .HS.open {
+    height:800px;
+      top: 70%; /* Adjust for even smaller screens */
+      right: 72%; /* Keep content within screen limits */
+      transform: rotate(60deg) scale(0.7); /* Adjust scale for smaller devices */
+      width: 500px; /* Smaller width for very small screens */
+      margin-left: 0; /* Center alignment */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-layer-1 h1 {
+    font-size: 3rem !important;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem !important;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.5rem !important;
+    }
+  
+    .hero-content h2 {
+      font-size: 2rem !important;
+    }
+  
+    .hero-content p {
+      font-size: 1rem !important;
+    } */
+/* } */
+
+
+/* .HS.open {
+  top: 50%;
+  right: 38%;
+  transform: rotate(60deg) scale(0.5);
+  transition: transform 0.5s ease;
+  width: 600px;
+  margin-left: 20%;
+} */
+.HS.open .text-layer-1 {
+  opacity: 1;
+  animation: fadeIn 0.5s ease forwards;
+}
+/* Sliding out text layer to the right */
+.text-layer-1 {
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+
+.text-layer-1:hover {
+  cursor: pointer;
+}
+
+/* Animation for sliding out text layer */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for sliding out text layer to the right */
+.text-layer-1.slide-out-right {
+  animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(150%, -50%);
+  }
+}
+
+/* Hide the hero content when ConcentricCircle is visible */
+.HS.carouselVisible {
+  display: none;
+}
+
+.concentric-circle {
+  /* Add styles for the concentric circle */
+  width: 200px;
+  height: 200px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}

@@ -1,0 +1,118 @@
+/* Main container */
+.container-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #555d50; /* Background color */
+  min-height: 100vh; /* Full viewport height */
+  color: white;
+  text-align: center; /* Center content horizontally */
+}
+
+/* Header content */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  margin-bottom: 20px;
+}
+
+.heading-content {
+  font-family: 'Inria Serif', serif;
+  font-size: 5.8vw; /* Responsive font size */
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+/* Logo styling */
+.logo-1 img {
+  width: 230px;
+  max-width: 100%; /* Ensure the logo scales with screen size */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Image container */
+.content-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  width: 1521px;
+  padding-top: 40%; /* Maintain aspect ratio */
+  overflow: hidden;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  position: relative;
+  height:800px;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: ;
+  height: auto;
+  object-fit: cover; /* Ensures image scales properly */
+}
+
+/* Button styling */
+.custom-button {
+  background: #000000;
+  height:51px;
+  width:165px;
+  margin-left: 1290px;
+  margin-right: auto;
+}
+
+/* Responsive design */
+
+/* Large screens */
+@media (max-width: 1200px) {
+  .heading-content {
+    font-size: 5vw; /* Adjust font size */
+  }
+
+  .logo-1 img {
+    width: 200px; /* Decrease logo size */
+  }
+
+  .image-container {
+    padding-top: 50%; /* Adjust aspect ratio */
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .container-outer {
+    padding-top: 30px;
+  }
+
+  .heading-content {
+    font-size: 7vw; /* Adjust font size for tablets */
+  }
+
+  .logo-1 img {
+    width: 150px; /* Reduce logo size */
+  }
+
+  .image-container {
+    padding-top: 60%; /* Adjust aspect ratio */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .heading-content {
+    font-size: 8vw; /* Adjust font size for mobile */
+  }
+
+  .logo-1 img {
+    width: 100px; /* Reduce logo size for mobile */
+  }
+
+  .image-container {
+    padding-top: 70%; /* Adjust aspect ratio */
+  }
+}

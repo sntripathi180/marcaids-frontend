@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Sniglet&display=swap");
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: rgba(255, 255, 255, 0.8);  */
+    position: absolute; /* Keep the navbar fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure the navbar is above the background image */
+    /* background:transparent; */
+}
+
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-img {
+    width: 150px;
+    height: 150px;
+}
+
+.searchbarr {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-input {
+    width: 350px;
+    
+    border-radius: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Menu icon (Hamburger) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon .bar.open:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-icon .bar.open:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon .bar.open:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navigation Links */
+.nav-links {
+    font-family: "Sniglet", system-ui;
+    margin-right: 40px;
+    border-radius: 50px;
+    background-color: rgba(99, 64, 42, 0.8);
+    height: 36px;
+    width: 479px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 40vw;
+    padding: 0;
+}
+
+.nav-links li {
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* .nav-links.open {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(99, 64, 42, 1);
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px 0;
+    z-index: 1;
+    height:300px;
+    
+} */
+
+.nav-links.open li {
+   
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(99, 64, 42, 0.2);
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* Hide the search bar in mobile view */
+    .searchbarr {
+        display: none;
+    }
+}
+
+
+@media (max-width:480px){
+    .nav-links.open {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(99, 64, 42, 1);
+        border-radius: 10px;
+        width: 200px;
+        padding: 10px 0;
+        z-index: 1;
+        height:300px;
+        color:white;
+        
+    }
+    .nav-links.open li {
+        color:white;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .nav-links.open a{
+        color:white;
+        text-align: center;
+        margin: 15px 0;
+    }
+}
