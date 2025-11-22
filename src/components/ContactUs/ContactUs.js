@@ -29,7 +29,7 @@ const ContactForm = () => {
     };
 
     try {
-     const response = await axios.post(`${process.env.REACT_APP_API_URL}submit`, data);
+     const response = await axios.post(`${process.env.REACT_APP_API_URL}/submit`, data);
       if (response.data.success) {
         alert("✅ Form submitted successfully!");
         // Reset form fields
